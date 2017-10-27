@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { HeartRateService } from '../heart-rate.service';
+import { DeviceService } from '../device.service';
+
 declare const d3: any;
 
 const d = {
@@ -17,13 +18,13 @@ const d = {
   styleUrls: ['./tracker.component.css']
 })
 export class TrackerComponent implements OnInit {
-  data = new BehaviorSubject(0);
+  // data = new BehaviorSubject(0);
 
-  constructor(private heartRateService: HeartRateService) { }
+  constructor(private deviceService: DeviceService) { }
 
   ngOnInit() {
     // Generate random data
-    setInterval(_ => this.data.next(Math.random() * d.range), 5000);
+    // setInterval(_ => this.data.next(Math.random() * d.range), 5000);
 
     const child = d3.select('.child');
 
@@ -31,7 +32,7 @@ export class TrackerComponent implements OnInit {
       .domain([0, d.range])
       .range([d.y0, d.yMax]);
 
-    this.data.subscribe(point => {
+    this.deviceService.distance.subscribe(point => {
       const y = linearScale(point);
       child.transition()
         .duration(d.animation).attr('y', y);
