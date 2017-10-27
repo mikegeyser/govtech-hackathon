@@ -7,13 +7,15 @@ import { HeaderComponent } from './header/header.component';
 
 import { HeartRateService } from './heart-rate.service';
 import { HeartRateComponent } from './heart-rate/heart-rate.component';
+import { BatteryComponent } from './battery/battery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TrackerComponent,
     HeaderComponent,
-    HeartRateComponent
+    HeartRateComponent,
+    BatteryComponent
   ],
   imports: [
     BrowserModule
