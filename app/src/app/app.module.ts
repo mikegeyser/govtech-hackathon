@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { HeartRateService } from './heart-rate.service';
+import { DeviceService } from './device.service';
+
 import { AppComponent } from './app.component';
 import { TrackerComponent } from './tracker/tracker.component';
 import { HeaderComponent } from './header/header.component';
 
-import { HeartRateService } from './heart-rate.service';
 import { HeartRateComponent } from './heart-rate/heart-rate.component';
 import { BatteryComponent } from './battery/battery.component';
 
@@ -20,7 +22,7 @@ import { BatteryComponent } from './battery/battery.component';
   imports: [
     BrowserModule
   ],
-  providers: [HeartRateService],
+  providers: [HeartRateService, DeviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
