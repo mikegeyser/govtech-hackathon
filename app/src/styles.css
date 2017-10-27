@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;    
+}
+
+:root {
+    --primary-color: #736CED;
+    --secondary-color: #9F9FED;
+    --tertiary-color: #D4C1EC;
+    --light-color: #F2DFD7;
+    --lighter-color: #FEF9FF;
+  }
+
+.frame {
+    fill: none;
+    stroke: #000;
+    }
+    
+.axis text {
+    font: 10px sans-serif;
+}
+
+.axis line,
+.axis circle {
+    fill: none;
+    stroke: #777;
+    stroke-dasharray: 1,4;
+}
+
+.axis :last-of-type circle {
+    stroke: #333;
+    stroke-dasharray: none;
+}
+
+.line {
+    fill: none;
+    stroke: red;
+    stroke-width: 1.5px;
+}
