@@ -5,16 +5,20 @@ import { AppComponent } from './app.component';
 import { TrackerComponent } from './tracker/tracker.component';
 import { HeaderComponent } from './header/header.component';
 
+import { HeartRateService } from './heart-rate.service';
+import { HeartRateComponent } from './heart-rate/heart-rate.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     TrackerComponent,
-    HeaderComponent
+    HeaderComponent,
+    HeartRateComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [HeartRateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

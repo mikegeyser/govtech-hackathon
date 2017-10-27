@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { HeartRateService } from '../heart-rate.service';
 declare const d3: any;
 
 const d = {
@@ -18,7 +19,7 @@ const d = {
 export class TrackerComponent implements OnInit {
   data = new BehaviorSubject(0);
 
-  constructor() { }
+  constructor(private heartRateService: HeartRateService) { }
 
   ngOnInit() {
     // Generate random data
