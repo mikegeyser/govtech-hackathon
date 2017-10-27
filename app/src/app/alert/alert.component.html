@@ -1,0 +1,7 @@
+<div *ngIf="deviceService.warning | async">
+  <h4>Caution!</h4>
+
+  <p>
+    {{deviceService.warning | async}}
+  </p>
+</div>

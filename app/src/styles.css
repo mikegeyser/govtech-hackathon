@@ -12,6 +12,7 @@ html, body {
     --tertiary-color: #D4C1EC;
     --light-color: #F2DFD7;
     --lighter-color: #FEF9FF;
+    --focus-color: #FF6347;
   }
 
 .frame {

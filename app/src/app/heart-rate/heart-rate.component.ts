@@ -29,22 +29,20 @@ export class HeartRateComponent implements OnInit {
 
     const line = d3.line()
       .x((d, i) => x(i))
-      .y((d) => y(d))
+      .y((d) => y(-1 * d))
       .curve(d3.curveBasis);
 
     const data = [60, 60, 60, 60];
 
-    graph.append('svg:path')
+    graph.append('g').attr('transform', 'translate(0, 50)').append('svg:path')
       .attr('d', line(data));
 
     this.deviceService.heartrate.subscribe(heartRate => {
       data.push(heartRate);
 
-      if (data.length > 100) {
-        data.splice(0, 100);
+      if (data.length > 30) {
+        data.shift();
       }
-
-      console.log(data);
 
       graph.selectAll('path')
         .data([data])

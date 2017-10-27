@@ -1,0 +1,22 @@
+:host {
+    position: absolute;
+    top: 6em;
+    left: 1em;
+    right: 1em;
+    background-color: var(--focus-color);
+    color: #ffffff;    
+}
+
+:host div {
+    padding: 1em;
+    min-height: 5em;
+}
+
+:host div h4 {
+    font-size: 2em;
+    margin:0;
+}
+
+:host div p {
+    font-size: 1.5em;
+}

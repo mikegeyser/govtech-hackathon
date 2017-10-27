@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 
 import { HeartRateComponent } from './heart-rate/heart-rate.component';
 import { BatteryComponent } from './battery/battery.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BatteryComponent } from './battery/battery.component';
     TrackerComponent,
     HeaderComponent,
     HeartRateComponent,
-    BatteryComponent
+    BatteryComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule
