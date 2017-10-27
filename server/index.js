@@ -1,42 +1,62 @@
 const app = require('express');
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
+const noble = require('noble');
 
 server.listen(4201);
 
-const noble = require('noble');
+let myHeartRate;
+const myAddress = '97d781f24f2045fd8d76a945deb6a007';
 
-noble.on('stateChange', function(state) {
+noble.on('stateChange', (state) => {
     if (state === 'poweredOn') {
         noble.startScanning();
-        noble.on('discover', function(peripheral) { 
-            
-            var macAdress = peripheral.uuid;
-
-            if (macAdress == "97d781f24f2045fd8d76a945deb6a007") {
-
-                var rss = peripheral.rssi;
-                var localName = peripheral.advertisement.localName; 
-                console.log(". Mac Address: " + macAdress + ", RSS: " + rss + ", Local Name: " + localName); 
-                
-                peripheral.connect((error) => {
-                    setInterval(() => {
-                        console.log("Update RSSI")
-                        peripheral.updateRssi((error, rssi) => {
-                            const distance = calculateDistance(rssi);
-                            console.log(`Distance: ${distance}`);
-                            io.emit("distance", distance);
-                        });
-                    }, 5000);
-                });
-            }
-        });
+        console.log('Started Scanning');
+    } else {
+        noble.stopScanning();
+        console.log('Is bluetooth on?');
     }
-    else
-      noble.stopScanning();
 });
 
+noble.on('discover', (peripheral) => {
+    if (peripheral.uuid === myAddress){
+        console.log("Found HRM");
 
+        io.emit("connected", true);
+        noble.stopScanning();
+
+        myHeartRate = peripheral;
+
+        peripheral.connect(connectToPeripheral);
+    }
+});
+
+function connectToPeripheral(error) {
+    if (error) {
+        console.log(`Could not connect to HRM ${error}`);
+    } else {
+        setInterval(updateValues, 5000);
+
+        myHeartRate.on('disconnect', () => {
+            io.emit("connected", false);
+            console.log('Disconnected');
+            clearInterval(updateValues);
+            noble.startScanning();
+        });
+    }
+}
+
+function updateValues() {
+    myHeartRate.updateRssi((error, rssi) => {
+        if (error) {
+            console.log(`Could not get rssi value ${error}`)
+        } else {
+            const distance = calculateDistance(rssi);
+            console.log(`Distance: ${distance}`);
+            io.emit("distance", distance);
+        }
+    });
+}
 
 function calculateDistance(rssi) {
     
