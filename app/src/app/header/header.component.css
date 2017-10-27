@@ -1,6 +1,6 @@
 :host {
     display: block;
-    height: 4em;
+    /* height: 4em; */
     line-height: 4em;
     width: 100%;
     margin: 0;
@@ -12,4 +12,18 @@ h1 {
  margin: 0 auto;
  width: 70%;
  text-align: center;
+}
+
+:host svg {
+    display: block;
+    float: left;
+    width: 2.5em;    
+    margin-left: 1em;
+    margin-top: 0.6em;
+    
+}
+
+:host svg path {
+    
+    fill: white;
 }
