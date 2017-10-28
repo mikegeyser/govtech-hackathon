@@ -1,4 +1,4 @@
-![Rescue Bug](https://raw.githubusercontent.com/mikegeyser/govtech-hackathon/master/app/src/assets/bug.png "")
+<img align="left" src="https://raw.githubusercontent.com/mikegeyser/govtech-hackathon/master/app/src/assets/bug.png">
 
 Rescue bug is a device designed to keep two people connected.
 This device would be in a form of an adjustable strap to be wrapped around the chest. 
@@ -9,14 +9,13 @@ This device will also send notification if someone takes it off outside the desi
 ![Demo](https://github.com/mikegeyser/govtech-hackathon/blob/master/app/src/assets/rescue-bug-demo.gif?raw=true "")
 
 # Team
+![Team](https://raw.githubusercontent.com/mikegeyser/govtech-hackathon/master/app/src/assets/team.jpg?raw=true "")
 - Thabiso
 - Sanele
 - Zipho
 - Kwenza
 - Gery
 - Mike
-
-![Team](https://raw.githubusercontent.com/mikegeyser/govtech-hackathon/master/app/src/assets/team.jpg?raw=true "")
 
 # Future Work
 - Distance smoothing
