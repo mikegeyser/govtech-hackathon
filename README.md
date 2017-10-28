@@ -6,7 +6,7 @@ Features of a rescue bug include; Bluetooth connection which connects the bug an
 The rescue bug will have a panic button and monitors the heart beat, which can detect if someone is in danger. The device will send notification to the parent, the next of kin, and then the police if both numbers are unreachable.
 This device will also send notification if someone takes it off outside the designated location or where that person lives.
 
-![Demo] (https://github.com/mikegeyser/govtech-hackathon/blob/master/app/src/assets/rescue-bug-demo.gif?raw=true "")
+![Demo](https://github.com/mikegeyser/govtech-hackathon/blob/master/app/src/assets/rescue-bug-demo.gif?raw=true "")
 
 # Team
 - Thabiso
