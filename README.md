@@ -16,7 +16,7 @@ This device will also send notification if someone takes it off outside the desi
 - Gery
 - Mike
 
-![Team](https://raw.githubusercontent.com/mikegeyser/govtech-hackathon/master/app/src/assets/team.jpeg "")
+![Team](https://raw.githubusercontent.com/mikegeyser/govtech-hackathon/master/app/src/assets/team.jpeg?raw=true "")
 
 # Future Work
 - Distance smoothing
