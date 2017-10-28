@@ -1,4 +1,4 @@
-<img align="left" src="https://raw.githubusercontent.com/mikegeyser/govtech-hackathon/master/app/src/assets/bug.png">
+<img align="left" src="https://raw.githubusercontent.com/mikegeyser/govtech-hackathon-2017/master/app/src/assets/bug.png">
 
 # Rescue Bug - GovTech Hackathon 2017
 Rescue bug is a device designed to keep two people connected.
@@ -9,10 +9,10 @@ This device will also send notification if someone takes it off outside the desi
 
 This was a project for the GovTech Hackathon 2017. [govtech.co.za](https://www.govtech.co.za)
 
-![Demo](https://github.com/mikegeyser/govtech-hackathon/blob/master/app/src/assets/rescue-bug-demo.gif?raw=true "")
+![Demo](https://github.com/mikegeyser/govtech-hackathon-2017/blob/master/app/src/assets/rescue-bug-demo.gif?raw=true "")
 
 # Team
-![Team](https://raw.githubusercontent.com/mikegeyser/govtech-hackathon/master/app/src/assets/team.jpg?raw=true "")
+![Team](https://raw.githubusercontent.com/mikegeyser/govtech-hackathon-2017/master/app/src/assets/team.jpg?raw=true "")
 - Thabiso
 - Sanele
 - Zipho
