@@ -23,8 +23,8 @@ export class DeviceService {
     const socket = io('http://172.20.10.8:4201/');
 
     // Test data
-    // setInterval(_ => this.distance.next(Math.random() * 50), 5000);
-    // setInterval(_ => this.heartrate.next(60 + Math.random() * 200), 5000);
+    setInterval(_ => this.distance.next(Math.random() * 30), 5000);
+    setInterval(_ => this.heartrate.next(Number((60 + Math.random() * 100).toFixed(0))), 5000);
 
     socket.on('distance', (d) => this.distance.next(d));
     socket.on('heartrate', (d) => this.heartrate.next(d));
