@@ -1,4 +1,21 @@
-# govtech-hackathon
+# govtech-hackathon 2017
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+Rescue Bug is a blah blah
+
 ![Rescue Bug](https://raw.githubusercontent.com/mikegeyser/govtech-hackathon/master/app/src/assets/bug.png "")
+Rescue Bug
+
+![Demo] (https://github.com/mikegeyser/govtech-hackathon/blob/master/app/src/assets/rescue-bug-demo.gif?raw=true "")
+
+# Team
+- Thabiso
+- Sanele
+- Zipho
+- Kwenza
+- Gery
+- Mike
+
+# Future Work
+
+- Distance smoothing
+- Show battery
